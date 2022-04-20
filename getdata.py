@@ -1,8 +1,5 @@
 # The purpose of this file is data extraction - getting all of the PDB and other
 # data required to do the machine learning.
-from rdkit import Chem
-import deepchem as dc
-import tensorflow as tf
 import pandas as pd
 import re
 import urllib.request
@@ -12,6 +9,7 @@ import wget
 import gzip
 import shutil
 
+print("Initializing variables and loading databases")
 # Variable initialization - for pdb, rheadb, and the url including www. because apparently that's important.
 pdbDir = "data/pdb-files/"
 availablePDBs = os.listdir(pdbDir)
@@ -22,7 +20,6 @@ uniprotAPI = 'https://www.uniprot.org/uploadlists/'
 pdbAPI = 'https://ftp.wwpdb.org/pub/pdb/data/structures/divided/pdb/'
 
 # Checking to see if uniprot-pdb has already been made, and if not, gets all of the data to create it
-print(os.listdir("data/"))
 if("uniprot-pdb.tsv" not in os.listdir("data/")):
     print("Uniprot-PDB Database not found, generating...")
     uniprotIDstring = ''
@@ -57,7 +54,10 @@ if("uniprot-pdb.tsv" not in os.listdir("data/")):
     # Write the data
     with open("data/uniprot-pdb.tsv", "w") as uniprotPDB:
         uniprotPDB.write(response.decode('utf-8'))
+else:
+    print("Found Uniprot-PDB Databse...")
 
+print("Downloading PDBS not found")
 uniprotPDB = pd.read_csv("data/uniprot-pdb.tsv", delimiter="\t")
 for index, row in uniprotPDB.iterrows():
     pdbEntry = "pdb" + row["To"].lower() + ".ent.gz"
@@ -74,3 +74,5 @@ for index, row in uniprotPDB.iterrows():
             with open(pdbDir + pdbEntry[:-3], 'wb') as pdbDecompressed:
                 shutil.copyfileobj(pdbCompressed, pdbDecompressed)
         os.remove(pdbDir + pdbEntry)
+    else:
+        print(pdbEntry + " found in " + pdbDir)
