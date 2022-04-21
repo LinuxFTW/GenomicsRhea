@@ -75,4 +75,4 @@ for index, row in uniprotPDB.iterrows():
                 shutil.copyfileobj(pdbCompressed, pdbDecompressed)
         os.remove(pdbDir + pdbEntry)
     else:
-        print(pdbEntry + " found in " + pdbDir)
+        print("{} found in {}".format(pdbEntry, pdbDir))
