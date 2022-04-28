@@ -1,8 +1,5 @@
 # The purpose of this file is data extraction - getting all of the PDB and other
 # data required to do the machine learning.
-from rdkit import Chem
-import deepchem as dc
-import tensorflow as tf
 import pandas as pd
 import re
 import urllib.request
@@ -13,6 +10,7 @@ import gzip
 import shutil
 from ReverseQuery import *
 
+print("Initializing variables and loading databases")
 # Variable initialization - for pdb, rheadb, and the url including www. because apparently that's important.
 # Location of PDBs
 pdbDir = "data/pdb-files/"
@@ -72,7 +70,10 @@ if("uniprot-pdb.tsv" not in os.listdir("data/")):
     # Write the data
     with open("data/uniprot-pdb.tsv", "w") as uniprotPDB:
         uniprotPDB.write(response.decode('utf-8'))
+else:
+    print("Found Uniprot-PDB Databse...")
 
+print("Downloading PDBS not found")
 uniprotPDB = pd.read_csv("data/uniprot-pdb.tsv", delimiter="\t")
 for index, row in uniprotPDB.iterrows():
     pdbEntry = "pdb" + row["To"].lower() + ".ent.gz"
@@ -89,3 +90,5 @@ for index, row in uniprotPDB.iterrows():
             with open(pdbDir + pdbEntry[:-3], 'wb') as pdbDecompressed:
                 shutil.copyfileobj(pdbCompressed, pdbDecompressed)
         os.remove(pdbDir + pdbEntry)
+    else:
+        print("{} found in {}".format(pdbEntry, pdbDir))
