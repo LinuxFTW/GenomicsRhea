@@ -14,5 +14,3 @@ tokenizer = RobertaTokenizerFast.from_pretrained("seyonec/PubChem10M_SMILES_BPE_
 featurizer = dc.feat.RxnFeaturizer(tokenizer, sep_reagent=True)
 feats = featurizer.featurize(['CCS(=O`)(=O)Cl.OCCBr>CCN(CC)CC.CCOCC>CCS(=O)(=O)OCCBr'])
 print(feats)
-
-
