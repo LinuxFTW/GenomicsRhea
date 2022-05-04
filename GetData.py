@@ -8,6 +8,7 @@ import os
 import wget
 import gzip
 import shutil
+import ReactionTest
 from DataQuery import *
 
 print("Initializing variables and loading databases")
@@ -25,7 +26,8 @@ rhea2uniprot = CreateDF("data/rhea2uniprot_sprot.tsv")
 rhea2rxndir = CreateDF("data/rhea-directions.tsv")
 
 # Regex string
-ecMatch = "^1."
+# HYDROLASES ARE 3. not 1. AAAAAAAAAA
+ecMatch = "^3."
 
 # API links
 uniprotAPI = 'https://www.uniprot.org/uploadlists/'
@@ -38,6 +40,7 @@ rxnList = os.listdir("data/rxn")
 if("uniprot-pdb.tsv" not in os.listdir("data/")):
     print("Uniprot-PDB Database not found, generating...")
     uniprotIDstring = ''
+    unavailableReactions = ReactionTest.CheckReactions()
     # Iterate through each row in rhea2ec, and if they are a hydrolysis reaction
     # get its associated uniprotID and add it to the query list.
     for index, row in rhea2ec.iterrows():

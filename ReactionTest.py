@@ -1,11 +1,13 @@
 from rdkit.Chem import AllChem
 import os
 
-rxnFolder = os.listdir("data/rxn/")
+def CheckReactions():
+    rxnFolder = os.listdir("data/rxn/")
+    failedReactions = []
 
-for rxnFile in rxnFolder:
-    try:
-        reaction = AllChem.ReactionFromRxnFile("data/rxn/" + rxnFile)
-        print(AllChem.ReactionToSmarts(reaction))
-    except (RuntimeError, TypeError, ValueError):
-        print(rxnFile + " failed. Continuing")
+    for rxnFile in rxnFolder:
+        try:
+            reaction = AllChem.ReactionFromRxnFile("data/rxn/" + rxnFile)
+        except (RuntimeError, TypeError, ValueError):
+            failedReactions.append(rxnFile[:-4])
+    return(failedReactions)
