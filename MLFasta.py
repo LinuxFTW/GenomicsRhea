@@ -143,5 +143,23 @@ ds_train, ds_test = torch.utils.data.random_split(
 train_dl = torch.utils.data.DataLoader(ds_train, batch_size=64, shuffle=True)
 test_dl = torch.utils.data.DataLoader(ds_test, batch_size=64, shuffle=True)
 
-# Create the neural network
+# Create the neural network and initialize optimizer
 nNet = TorchClasses.NeuralNetwork()
+criterion = torch.nn.NLLLoss()
+optimizer = torch.optim.SGD(nNet.parameters(), lr=0.01, momentum=0.9)
+
+# Perform learning
+epochs = 1
+for e in range(epochs):
+    running_loss = 0
+    for reaction, sequence in train_dl:
+        optimizer.zero_grad()
+        output = nNet(reaction)
+
+        loss = criterion(output, sequence)
+        loss.backward()
+        optimizer.step()
+
+        running_loss += loss.item()
+    else:
+        print(f"Training loss: {running_loss/len(train_dl)}")
