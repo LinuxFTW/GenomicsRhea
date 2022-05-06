@@ -17,20 +17,20 @@ import os.path
 # Initiate the proper logging formate
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s: %(message)s")
 
-# Initiate the DataFrames
-rhea2uniprot = DataQuery.CreateDF("data/rhea2uniprot_sprot.tsv")
-rheaDirections = DataQuery.CreateDF("data/rhea-directions.tsv")
-
-# Various variable initializations
-# Will need to go into the for loop in the future
-records = []
-rxnDiffFP = []
-max_seq = 0
-count = 0
-vocab = set()
-
 # If the pickled file versions do not exist, then generate them. Otherwise open them from scratch.
 if(not (os.path.isfile("data/tensorRXN.pickle") and os.path.isfile("data/tensorRecords.pickle"))):
+    # Initiate the DataFrames
+    rhea2uniprot = DataQuery.CreateDF("data/rhea2uniprot_sprot.tsv")
+    rheaDirections = DataQuery.CreateDF("data/rhea-directions.tsv")
+
+    # Various variable initializations
+    # Will need to go into the for loop in the future
+    records = []
+    rxnDiffFP = []
+    max_seq = 0
+    count = 0
+    vocab = set()
+
     # For every record in the given FASTA file,
     for record in SeqIO.parse("data/uniprot-aaseq.fasta", "fasta"):
         # Gather the maximum sequence length
