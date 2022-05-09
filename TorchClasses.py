@@ -11,7 +11,7 @@ class BiologicalSequenceDataset:
     def __getitem__(self, i):
         seq = self.seqData[i]
         rxn = self.rxnData[i]
-        return seq, rxn
+        return rxn, seq
 
 class NeuralNetwork(nn.Module):
     def __init__(self):
