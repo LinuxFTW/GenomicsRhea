@@ -109,6 +109,12 @@ if(not (os.path.isfile("data/tensorRXN.pickle") and os.path.isfile("data/tensorR
         seqTensor = torch.tensor([to_ix[residue] for residue in record.seq]) 
         tensorRecords.append(seqTensor)
 
+    tensorRecords = torch.nn.utils.pad_sequence(
+        tensorRecords,
+        batch_first=True,
+        padding_value=to_ix["<pad>"]
+    )
+ 
     # Build the rxn record
     for rxn in rxnDiffFP:
         rxnTensor = torch.tensor(rxn) 
