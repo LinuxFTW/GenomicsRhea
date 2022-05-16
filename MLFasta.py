@@ -170,5 +170,5 @@ for e in range(epochs):
         running_loss += loss.item()
         print(f"Training Loss: {loss}")
     else:
-        print(f"Training loss: {running_loss/len(train_dl)}")
+        print(f"Epoch Loss: {running_loss/len(train_dl)}")
         torch.save(nNet.state_dict(), f"data/NeuralNet{e}.pickle")
