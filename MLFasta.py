@@ -109,23 +109,23 @@ if(not (os.path.isfile("data/tensorRXN.pickle") and os.path.isfile("data/tensorR
         seqTensor = torch.tensor([to_ix[residue] for residue in record.seq]) 
         tensorRecords.append(seqTensor)
 
-    tensorRecords = torch.nn.utils.pad_sequence(
+    tensorRecords = torch.nn.utils.rnn.pad_sequence(
         tensorRecords,
         batch_first=True,
         padding_value=to_ix["<pad>"]
     )
- 
+
     # Build the rxn record
     for rxn in rxnDiffFP:
         rxnTensor = torch.tensor(rxn) 
-        tensorRxnDiff.append(rxnTensor)
+        tensorRxnDiff.append(rxnTensor.float())
 
     # Pickle each for later usage.
     with open("data/tensorRXN.pickle", "wb") as f:
-        pickle.dump(rxnTensor, f)
+        pickle.dump(tensorRxnDiff, f)
 
     with open("data/tensorRecords.pickle", "wb") as f:
-        pickle.dump(tensorRxnDiff, f)
+        pickle.dump(tensorRecords, f)
 
 # If the pickled files already exist, open them!
 else:
@@ -151,11 +151,12 @@ test_dl = torch.utils.data.DataLoader(ds_test, batch_size=64, shuffle=True)
 
 # Create the neural network and initialize optimizer
 nNet = TorchClasses.NeuralNetwork()
-criterion = torch.nn.NLLLoss()
+criterion = torch.nn.L1Loss()
 optimizer = torch.optim.SGD(nNet.parameters(), lr=0.01, momentum=0.9)
 
 # Perform learning
-epochs = 1
+print(len(train_dl))
+epochs = 100
 for e in range(epochs):
     running_loss = 0
     for reaction, sequence in train_dl:
@@ -167,5 +168,7 @@ for e in range(epochs):
         optimizer.step()
 
         running_loss += loss.item()
+        print(f"Training Loss: {loss}")
     else:
         print(f"Training loss: {running_loss/len(train_dl)}")
+        torch.save(nNet.state_dict(), f"data/NeuralNet{e}.pickle")
