@@ -157,6 +157,7 @@ optimizer = torch.optim.SGD(nNet.parameters(), lr=0.01, momentum=0.9)
 # Perform learning
 print(len(train_dl))
 epochs = 100
+
 for e in range(epochs):
     running_loss = 0
     for reaction, sequence in train_dl:

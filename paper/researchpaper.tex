@@ -44,17 +44,28 @@ linear layer presented the output of the model.
 \subsection{Training and Analysis}
 For training, the inputs and outputs were batched to 64 samples and shuffled to
 limit overfitting. The L1 Loss function was used to determine the error of the
-model. Stochastic gradient descent was utilized to optimize model gradients and
-train the model. The training sequence was run for 100 epochs to get an optimized
-model.
+model. Stochastic gradient descent was utilized to optimize the model.
+The training sequence was run for 100 epochs to get an optimized model.
 
 Due to time constraints, the model's learning capabilities and pattern recognition
 were not determined.
 
 \section{Results}
-The neural network had an estimated loss of 0.5 (ish).
+Of the 9890 sequences queried from UniprotKB with the enzyme class of 3.1.x.x, 19084
+reaction-sequence pairs were generated and used for training in the machine learning
+model. 
+
+In a visual examination of the output the neural network gave, it became apparent that
+the neural network had not learned much of the data. The output given was to be a
+one-hot encoded sequence in number form, to be converted back to a proper sequence. Unfortunately
+the output received was a sequence of numbers between 12-14 and then a gradual descent
+to 7's, presumably the "pad" character created to sync 
 
 \section{Discussion}
+Most likely 
+
+While the model has unfortunately not succeeded in learning anything meaningful, this work
+does need to be continued due to both the commercial and ecological value of note.
 
 
 \end{document}
