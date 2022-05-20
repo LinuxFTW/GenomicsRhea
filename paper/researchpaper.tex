@@ -18,6 +18,33 @@
 
 \begin{document}
 \maketitle
+\section{Introduction}
+Plastic is an incredibly versatile and cheap material. It is used in nearly every industry,
+from packaging to consumable goods to medicine to research \cite{geyer2017production}.
+Estimates for global plastic production range from 335 MT to 380 Mt \cite{drzyzga2019plastic,
+geyer2017production,leal2019overview}. This quantity is high due to its high versatility
+and durability. This comes at a great cost at the end of its lifespan.
+
+Plastic waste management can be done in a few different ways, including but not
+limited to placing it into the ocean, placing it into the landfill, or burning it.
+The more labor intensive solution is to burn the plastic to help regain some of
+the energy lost from its production. This comes with the harmful fumes which can
+wreak havoc amongst various organs and body systems \cite{agnes2016environmental}.
+Placing it into the ocean and landfill are both quick and easy, yet have vast ecological
+impacts for those living in those environments.
+
+% Mention land first, then transition to ocean production. This is super important
+% to consider because of the transition from land to sea.
+
+Plastic placed into the ocean usually comes from the land, with an estimated 4.8
+to 12.7 million MT of plastic entering the ocean in 2010 alone \cite{jambeck2015plastic}.
+This causes massive ecological harm to the sea life living in the ocean. The harm
+comes from microplastics, which biota in the sea eat. 
+
+Bioremediation is a more viable solution for plastic waste management. While it
+is true that bioremediation is slower and incredibly plastic specific, it's important
+to remember that 
+
 \section{Methods}
 \subsection{Data Acquisition}
 RheaDB was utilized to find ester hydrolysis reactions according to the Enzyme Classification
@@ -30,8 +57,9 @@ the reaction. Next the fingerprint was converted into a PyTorch tensor for impor
 into the machine learning algorithm.
 
 For every sequence, a one-hot encoding of the sequence was built to create a suitable
-output for the reaction. These sequences were then converted into PyTorch tensors
-for input into the machine learning algorithm paired up with its corresponding reaction.
+output for the reaction. Each amino acid was represented by an integer.
+These sequences were then converted into PyTorch tensors
+for input into the machine learning algorithm paired up with its corresponding reaction fingerprint.
 These pairs were split randomly into a ratio of 75\% training and 25\% test datasets
 
 \subsection{Neural Network Design}
@@ -62,10 +90,26 @@ the output received was a sequence of numbers between 12-14 and then a gradual d
 to 7's, presumably the "pad" character created to sync 
 
 \section{Discussion}
-Most likely 
+Future work on the subject is key to enhancing our ability to create and use enzymes
+to catalyze reactions. The most arbitrary extension of this work is in rewriting
+the featurization of the enzymes to more resemble other machine learning projects.
+Rather than represent each amino acid as a number, represent it as a 21-bit tensor.
+Each bit would represent a different amino acid being turned on. 
 
-While the model has unfortunately not succeeded in learning anything meaningful, this work
-does need to be continued due to both the commercial and ecological value of note.
+Another more laborious route for the project is to move towards a 3D-based approach
+opposed to the current sequence-based approach. This route is more difficult due
+to the conversion from a structure to a one-dimensional input for a neural network.
+Before the fasta-approach branch it was intended as a structure-based approach but
+processing times were too long for a limited time scale.
 
+Another another pathway to take would be returning the project to a more typical
+enzyme design process. This would involve completely refactoring all of the work
+done so far, but may offer better end results. The process, described briefly, is
+beginning with the simulated transition state using density-functional theory (DFT)
+and building up the enzyme around said transition state.
+
+Regardless, continuing work on enzyme design is irrefutably important. Creating
+enzymes from scratch has possibilities ranging from new antibiotics to ecological
+benefits. 
 
 \end{document}
