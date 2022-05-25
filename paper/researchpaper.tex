@@ -21,34 +21,44 @@
 \section{Introduction}
 Plastic is an incredibly versatile and cheap material. It is used in nearly every industry,
 from packaging to consumable goods to medicine to research \cite{geyer2017production}.
-Estimates for global plastic production range from 335 MT to 380 Mt \cite{drzyzga2019plastic,
+Estimates for global plastic production range from 335 MT to 380 MT \cite{drzyzga2019plastic,
 geyer2017production,leal2019overview}. This quantity is high due to its high versatility
-and durability. This comes at a great cost at the end of its lifespan.
+and durability. After its usage though, plastic lingers in range from a few years
+to decades. Polyethylene terephthalate, for example, takes one year to degrade one
+$\mu$m of plastic from the outside in \cite{chamas2020degradation}
 
+% Maybe a paragraph on how long plastic takes to degrade in a natural environment?
+% Maybe include that in this paragraph at the end?
+% Maybe quite focusing on the labor-intensive quantification?
 Plastic waste management can be done in a few different ways, including but not
-limited to placing it into the ocean, placing it into the landfill, or burning it.
+limited to placing it into a landfill or burning it.
 The more labor intensive solution is to burn the plastic to help regain some of
 the energy lost from its production. This comes with the harmful fumes which can
 wreak havoc amongst various organs and body systems \cite{agnes2016environmental}.
 Placing it into the ocean and landfill are both quick and easy, yet have vast ecological
-impacts for those living in those environments.
+impacts for marine creatures living in those environments.
 
-% Mention land first, then transition to ocean production. This is super important
-% to consider because of the transition from land to sea.
+% Maye discuss the impacts stated above?
 
-Plastic placed into the ocean usually comes from the land, with an estimated 4.8
-to 12.7 million MT of plastic entering the ocean in 2010 alone \cite{jambeck2015plastic}.
-This causes massive ecological harm to the sea life living in the ocean. The harm
-comes from microplastics, which biota in the sea eat. 
+Bioremediation is a more viable solution for plastic waste management as it converts
+harmful polutants into harmless byrpoducts. Bioremediation
+can be helpful because it is cheaper and can provide a more long-term low-tech solution \cite{vidali2001bioremediation}.
+While it is true that bioremediation is slower and incredibly plastic specific,
+%maybe another citation here?
+it's important to remember that enzyme design could help improve upon the specificity
+by designing enzymes to degrade a variety polymers. Not only could this bioremediate
+plastic-contaminated samples, it could also handle other chemical compounds \cite{karigar2011role}.
 
-Bioremediation is a more viable solution for plastic waste management. While it
-is true that bioremediation is slower and incredibly plastic specific, it's important
-to remember that 
+Enzyme design could be expanded even further though. \textit{Most} chemical reactions could
+be catalyzed by enzymes. The issue with the current enzyme design process is that it is rather
+lengthy and difficult to use \cite{richter2011novo}. The goal of this research project was to
+use a machine learning method on ester hydrolysis reactions to create enzymes that catalyze them.
+This is in an attempt to create an easier pipeline for creating enzymes.
 
 \section{Methods}
 \subsection{Data Acquisition}
 RheaDB was utilized to find ester hydrolysis reactions according to the Enzyme Classification
-(EC) standards. From selected reactions, Rhea's cross references were utilized
+(EC) standards, specifically any enzyme with the classification 3.1.x.x. From selected reactions, Rhea's cross references were utilized
 to obtain sequences for the various chemical reactions from UniprotKB. For every
 sequence-reaction pair, the Morgan Fingerprint Difference of the reaction was created using
 RDKit's built-in fingerprinting function. Due to a lack of known directional data,
@@ -110,6 +120,8 @@ and building up the enzyme around said transition state.
 
 Regardless, continuing work on enzyme design is irrefutably important. Creating
 enzymes from scratch has possibilities ranging from new antibiotics to ecological
-benefits. 
+benefits to commercial benefits. The possibilities are endless.
+
+\printbibliography
 
 \end{document}

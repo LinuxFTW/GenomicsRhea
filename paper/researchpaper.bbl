@@ -1,0 +1,363 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{agnes2016environmental}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AN}{%
+         family={{\'A}gnes},
+         familyi={{\'A}\bibinitperiod},
+         given={Nagy},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=RK}{%
+         family={Rajmund},
+         familyi={R\bibinitperiod},
+         given={KUTI},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ANRK1}
+    \strng{fullhash}{ANRK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{3}
+    \field{pages}{231\bibrangedash 237}
+    \field{title}{The environmental impact of plastic waste incineration}
+    \field{volume}{15}
+    \field{journaltitle}{AARMS--Academic and Applied Research in Military and
+  Public Management Science}
+    \field{year}{2016}
+  \endentry
+
+  \entry{chamas2020degradation}{article}{}
+    \name{author}{9}{}{%
+      {{hash=CA}{%
+         family={Chamas},
+         familyi={C\bibinitperiod},
+         given={Ali},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MH}{%
+         family={Moon},
+         familyi={M\bibinitperiod},
+         given={Hyunjin},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zheng},
+         familyi={Z\bibinitperiod},
+         given={Jiajia},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=QY}{%
+         family={Qiu},
+         familyi={Q\bibinitperiod},
+         given={Yang},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=TT}{%
+         family={Tabassum},
+         familyi={T\bibinitperiod},
+         given={Tarnuma},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=JJH}{%
+         family={Jang},
+         familyi={J\bibinitperiod},
+         given={Jun\bibnamedelima Hee},
+         giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=AOM}{%
+         family={Abu-Omar},
+         familyi={A\bibinithyphendelim O\bibinitperiod},
+         given={Mahdi},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SSL}{%
+         family={Scott},
+         familyi={S\bibinitperiod},
+         given={Susannah\bibnamedelima L},
+         giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Suh},
+         familyi={S\bibinitperiod},
+         given={Sangwon},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACS Publications}%
+    }
+    \strng{namehash}{CA+1}
+    \strng{fullhash}{CAMHZJQYTTJJHAOMSSLSS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{number}{9}
+    \field{pages}{3494\bibrangedash 3511}
+    \field{title}{Degradation rates of plastics in the environment}
+    \field{volume}{8}
+    \field{journaltitle}{ACS Sustainable Chemistry \& Engineering}
+    \field{year}{2020}
+  \endentry
+
+  \entry{drzyzga2019plastic}{article}{}
+    \name{author}{2}{}{%
+      {{hash=DO}{%
+         family={Drzyzga},
+         familyi={D\bibinitperiod},
+         given={Oliver},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Prieto},
+         familyi={P\bibinitperiod},
+         given={Auxiliadora},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley-Blackwell}%
+    }
+    \strng{namehash}{DOPA1}
+    \strng{fullhash}{DOPA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{number}{1}
+    \field{pages}{66}
+    \field{title}{Plastic waste management, a matter for the ‘community’}
+    \field{volume}{12}
+    \field{journaltitle}{Microbial biotechnology}
+    \field{year}{2019}
+  \endentry
+
+  \entry{geyer2017production}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GR}{%
+         family={Geyer},
+         familyi={G\bibinitperiod},
+         given={Roland},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=JJR}{%
+         family={Jambeck},
+         familyi={J\bibinitperiod},
+         given={Jenna\bibnamedelima R},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=LKL}{%
+         family={Law},
+         familyi={L\bibinitperiod},
+         given={Kara\bibnamedelima Lavender},
+         giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Association for the Advancement of Science}%
+    }
+    \strng{namehash}{GRJJRLKL1}
+    \strng{fullhash}{GRJJRLKL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{7}
+    \field{pages}{e1700782}
+    \field{title}{Production, use, and fate of all plastics ever made}
+    \field{volume}{3}
+    \field{journaltitle}{Science advances}
+    \field{year}{2017}
+  \endentry
+
+  \entry{karigar2011role}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KCS}{%
+         family={Karigar},
+         familyi={K\bibinitperiod},
+         given={Chandrakant\bibnamedelima S},
+         giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=RSS}{%
+         family={Rao},
+         familyi={R\bibinitperiod},
+         given={Shwetha\bibnamedelima S},
+         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Hindawi Limited}%
+    }
+    \strng{namehash}{KCSRSS1}
+    \strng{fullhash}{KCSRSS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{Role of microbial enzymes in the bioremediation of
+  pollutants: a review}
+    \field{volume}{2011}
+    \field{journaltitle}{Enzyme research}
+    \field{year}{2011}
+  \endentry
+
+  \entry{leal2019overview}{article}{}
+    \name{author}{7}{}{%
+      {{hash=LFW}{%
+         family={Leal\bibnamedelima Filho},
+         familyi={L\bibinitperiod\bibinitdelim F\bibinitperiod},
+         given={Walter},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=SU}{%
+         family={Saari},
+         familyi={S\bibinitperiod},
+         given={Ulla},
+         giveni={U\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Fedoruk},
+         familyi={F\bibinitperiod},
+         given={Mariia},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=IA}{%
+         family={Iital},
+         familyi={I\bibinitperiod},
+         given={Arvo},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MH}{%
+         family={Moora},
+         familyi={M\bibinitperiod},
+         given={Harri},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kl{\"o}ga},
+         familyi={K\bibinitperiod},
+         given={Marija},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=VV}{%
+         family={Voronova},
+         familyi={V\bibinitperiod},
+         given={Viktoria},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{LFW+1}
+    \strng{fullhash}{LFWSUFMIAMHKMVV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{pages}{550\bibrangedash 558}
+    \field{title}{An overview of the problems posed by plastic products and the
+  role of extended producer responsibility in Europe}
+    \field{volume}{214}
+    \field{journaltitle}{Journal of cleaner production}
+    \field{year}{2019}
+  \endentry
+
+  \entry{richter2011novo}{article}{}
+    \name{author}{5}{}{%
+      {{hash=RF}{%
+         family={Richter},
+         familyi={R\bibinitperiod},
+         given={Florian},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=LFA}{%
+         family={Leaver-Fay},
+         familyi={L\bibinithyphendelim F\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KSD}{%
+         family={Khare},
+         familyi={K\bibinitperiod},
+         given={Sagar\bibnamedelima D},
+         giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Bjelic},
+         familyi={B\bibinitperiod},
+         given={Sinisa},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Baker},
+         familyi={B\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science San Francisco, USA}%
+    }
+    \strng{namehash}{RF+1}
+    \strng{fullhash}{RFLFAKSDBSBD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{number}{5}
+    \field{pages}{e19230}
+    \field{title}{De novo enzyme design using Rosetta3}
+    \field{volume}{6}
+    \field{journaltitle}{PloS one}
+    \field{year}{2011}
+  \endentry
+
+  \entry{vidali2001bioremediation}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VM}{%
+         family={Vidali},
+         familyi={V\bibinitperiod},
+         given={Mn},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {De Gruyter}%
+    }
+    \strng{namehash}{VM1}
+    \strng{fullhash}{VM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{number}{7}
+    \field{pages}{1163\bibrangedash 1172}
+    \field{title}{Bioremediation. an overview}
+    \field{volume}{73}
+    \field{journaltitle}{Pure and applied chemistry}
+    \field{year}{2001}
+  \endentry
+\enddatalist
+\endinput
